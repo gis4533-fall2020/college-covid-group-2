@@ -61,6 +61,37 @@
             height: 100%;
             width: 100%;
         }
+                .floating-panel {
+            width: 160px; /* Set the width of the sidebar */
+            position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+            z-index: 9999;
+            bottom: 0px;
+            left: 0px;
+            /* Black with some transparency */
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;    /* some nice rounded corners */
+            padding: 10px;
+            margin: 20px;
+            /* Text color */
+            color: navy;
+        }
+
+        /* The navigation menu links */
+        .floating-panel * {
+/*            padding: 6px 8px 6px 16px;*/
+            text-decoration: none;
+            display: block;
+        }
+
+        /* The navigation menu links */
+        .floating-panel a {
+            color: red;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .floating-panel a:hover {
+            color: #f1f1f1;
+        }
     </style>
 
     <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
