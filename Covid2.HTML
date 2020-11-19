@@ -6,6 +6,51 @@
   <title>Covid Cases-US Colleges - 4.9</title>
 
   <style>
+      
+      */
+        #header {
+            /* positions at the top of the page */
+            top: 0;
+            /* make it full width */
+            width: 100%;
+            /* make it visible on top of the map */
+            z-index: 999999;
+            /* fixed position within <body> */
+            position: fixed;
+            /* note that the map is positioned this far from the top of the
+            page*/
+            height: 60px;
+            /* white text */
+            color: white;
+            /* green background */
+            background-color: red;
+            /* some spacing */
+            padding-left: 12px;
+            /* my attempt at not overlapping the map*/
+            overflow: hidden;
+            /* different font */
+            font-family: Helvetica, sans-serif;
+        }
+        /* header children styling */
+        #header * {
+            /* put everything on the same line */
+            display: inline-block;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+        /* bring items to the right */
+        .right {
+            float: right;
+        }
+        /* link or anchor tag(<a>) styling */
+        a {
+            color: aqua;
+        }
+        /* put this text in line with other text in header */
+        #header h5 {
+            margin-top: 25px;
+        }
+      
     html,
     body,
     #viewDiv {
@@ -54,6 +99,13 @@
 </head>
 
 <body>
+    
+    <header id="header">
+        <h2>College covid cases through out the U.S</h2>
+        <h3><a href="https://www.arcgis.com/home/index.html" target="_blank">Built with arc online</a></h3>
+        <h5 class="right">GIS4533 | Fall 2020 | Ben, Kasey, Matt, Jake</h5>
+    </header>
+    
   <div id="viewDiv"></div>
 </body>
 
