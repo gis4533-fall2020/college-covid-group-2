@@ -4,6 +4,7 @@ A map showing springs in St. Louis county. Created from template:https://raw.git
 
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Springs in St. Louis County</title>
@@ -28,10 +29,55 @@ A map showing springs in St. Louis county. Created from template:https://raw.git
             margin: 0;
             padding: 0;
         }
+
+        .floating-panel {
+            width: 160px;
+            /* Set the width of the sidebar */
+            position: fixed;
+            /* Fixed Sidebar (stay in place on scroll) */
+            z-index: 9999;
+            bottom: 0px;
+            left: 0px;
+            /* Black with some transparency */
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            /* some nice rounded corners */
+            padding: 10px;
+            margin: 20px;
+            /* Text color */
+            color: navy;
+        }
+
+        /* The navigation menu links */
+        .floating-panel * {
+            /*            padding: 6px 8px 6px 16px;*/
+            text-decoration: none;
+            display: block;
+        }
+
+        /* The navigation menu links */
+        .floating-panel a {
+            color: red;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .floating-panel a:hover {
+            color: #f1f1f1;
+        }
+
     </style>
 </head>
 
 <body>
+    <nav class="floating-panel">
+        <h2>Duluth Points of Interest</h2>
+        <h3><a href="https://www.visitduluth.com" target="_blank">(More Information on Tourism)</a></h3>
+        <h5>
+            <p>Welcome to the city of Duluth. There are many sights to see and activites to experience in this beautiful city. Here is a map showing off a few of these attractions for you
+                to visit during your stay here. Feel free to click the link above to see the Duluth tourism website and enjoy our city inbetween all the teeth talk! </p>
+
+        </h5>
+    </nav>
     <div id="map"></div>
 
     <script>
@@ -62,5 +108,8 @@ A map showing springs in St. Louis county. Created from template:https://raw.git
                 '</table>',
                 evt.feature.properties);
         });
+
     </script>
-</body></html>
+</body>
+
+</html>
