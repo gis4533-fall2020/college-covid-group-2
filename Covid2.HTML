@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-  <title>Covid Cases-US Colleges - 4.9</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Covid Cases-US Colleges - 4.9</title>
 
-  <style>
-      
-      */
-        #header {
+    <style>
+        */ #header {
             /* positions at the top of the page */
             top: 0;
             /* make it full width */
@@ -31,6 +29,7 @@
             /* different font */
             font-family: Helvetica, sans-serif;
         }
+
         /* header children styling */
         #header * {
             /* put everything on the same line */
@@ -38,75 +37,85 @@
             margin-right: 20px;
             margin-top: 10px;
         }
+
         /* bring items to the right */
         .right {
             float: right;
         }
+
         /* link or anchor tag(<a>) styling */
         a {
             color: aqua;
         }
+
         /* put this text in line with other text in header */
         #header h5 {
             margin-top: 25px;
         }
-      
-    html,
-    body,
-    #viewDiv {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      width: 100%;
-    }
-  </style>
 
-  <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
-
-  <script src="https://js.arcgis.com/4.9/"></script>
-
-  <script>
-    require([
-      "esri/views/MapView",
-      "esri/WebMap"
-    ], function(
-      MapView, WebMap
-    ) {
-
-      /************************************************************
-       * Creates a new WebMap instance. A WebMap must reference
-       * a PortalItem ID that represents a WebMap saved to
-       * arcgis.com or an on-premise portal.
-       *
-       * To load a WebMap from an on-premise portal, set the portal
-       * url with esriConfig.portalUrl.
-       ************************************************************/
-      var webmap = new WebMap({
-        portalItem: { // autocasts as new PortalItem()
-          id: "47fe03bac7d84a6c96714262dfa0ee46"
+        html,
+        body,
+        #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
         }
-      });
+    </style>
 
-      /************************************************************
-       * Set the WebMap instance to the map property in a MapView.
-       ************************************************************/
-      var view = new MapView({
-        map: webmap,
-        container: "viewDiv"
-      });
-    });
-  </script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+
+    <script src="https://js.arcgis.com/4.9/"></script>
+
+    <script>
+        require([
+            "esri/views/MapView",
+            "esri/WebMap"
+        ], function(
+            MapView, WebMap
+        ) {
+
+            /************************************************************
+             * Creates a new WebMap instance. A WebMap must reference
+             * a PortalItem ID that represents a WebMap saved to
+             * arcgis.com or an on-premise portal.
+             *
+             * To load a WebMap from an on-premise portal, set the portal
+             * url with esriConfig.portalUrl.
+             ************************************************************/
+            var webmap = new WebMap({
+                portalItem: { // autocasts as new PortalItem()
+                    id: "47fe03bac7d84a6c96714262dfa0ee46"
+                }
+            });
+
+            /************************************************************
+             * Set the WebMap instance to the map property in a MapView.
+             ************************************************************/
+            var view = new MapView({
+                map: webmap,
+                container: "viewDiv"
+            });
+        });
+    </script>
 </head>
 
 <body>
-    
+
     <header id="header">
         <h2>College covid cases through out the U.S</h2>
         <h3><a href="https://www.arcgis.com/home/index.html" target="_blank">Built with arc online</a></h3>
         <h5 class="right">GIS4533 | Fall 2020 | Ben, Kasey, Matt, Jake</h5>
     </header>
-    
-  <div id="viewDiv"></div>
-</body>
 
-</html>
+    <nav class="floating-panel">
+        <h2>Duluth Points of Interest</h2>
+        <h3><a href="https://www.visitduluth.com" target="_blank">(More Information on Tourism)</a></h3>
+        <h5>
+            <p>Welcome to the city of Duluth. There are many sights to see and activites to experience in this beautiful city. Here is a map showing off a few of these attractions for you
+                to visit during your stay here. Feel free to click the link above to see the Duluth tourism website and enjoy our city inbetween all the teeth talk! </p>
+
+        </h5>
+    </nav>
+    <div id="viewDiv"></div>
+</body></html>
