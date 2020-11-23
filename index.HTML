@@ -75,6 +75,21 @@
             /* Text color */
             color: navy;
         }
+        
+              .floating-panel2 {
+            width: 140px; /* Set the width of the sidebar */
+            position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+            z-index: 9999;
+            bottom: 0px;
+            left: 1060px;
+            /* Black with some transparency */
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;    /* some nice rounded corners */
+            padding: 10px;
+            margin: 20px;
+            /* Text color */
+            color: navy;
+        }
 
         /* The navigation menu links */
         .floating-panel * {
@@ -129,6 +144,7 @@
             });
         });
     </script>
+    
 </head>
 
 <body>
@@ -136,7 +152,7 @@
     <header id="header">
         <h2>College Covid-19 Cases Throughout the U.S.</h2>
         <h3><a href="https://www.nytimes.com/interactive/2020/us/covid-college-cases-tracker.html" target="_blank">Data provided by The New York Times</a></h3>
-        <h5 class="right">GIS4533 | Fall 2020 | Ben, Kasey, Matt, Jake</h5>
+        <h5 class="right">GIS4533 | Fall 2020 | Ben, Kasey, Mat, Jake</h5>
     </header>
 
     <nav class="floating-panel">
@@ -147,5 +163,12 @@
 
         </h5>
     </nav>
+    
+      <nav class="floating-panel2">
+        <h2>Click on the  map to view detailed information about individual colleges. </h2>
+       
+    </nav>
+    
     <div id="viewDiv"></div>
+    
 </body></html>
